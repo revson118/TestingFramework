@@ -3,6 +3,8 @@ package com.CRM;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import com.CUtility.Utility;
+
 public class Login {
 	
 	private WebDriver driver;
@@ -17,6 +19,8 @@ public class Login {
 	
 	
 	public String doLogin(String em,String ps) {
+		
+		  Utility.getScreenShot(driver);
 		driver.findElement(email).sendKeys(em);
 		driver.findElement(pwd).sendKeys(ps);
 		driver.findElement(btn).click();
